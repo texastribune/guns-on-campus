@@ -5,7 +5,7 @@ var config = {};
 
 config.deploy = {
   bucket: 'moose.texastribune.org',
-  key: 'antlers',
+  key: 'guns-on-campus',
   profile: 'newsapps'
 };
 
@@ -15,15 +15,15 @@ config.templateFolder = './app/templates';
 config.data = {
   docs: [
     {
-      fileid: '1iSsqopd2QLhlQDx0gVX9rYoUp-akX1tdZMF6910BhaU',
+      fileid: '1Rh1dODfL0Zr8IDTmeHYCajHqYs00q9PxBvry6z_2DeA',
       name: 'story_one'
     },
     {
-      fileid: '1iSsqopd2QLhlQDx0gVX9rYoUp-akX1tdZMF6910BhaU',
+      fileid: '1tzjRyr2Ma2v_b8KCEQmQoy5fi55uijeHVWpxvKa4bCM',
       name: 'story_two'
     },
     {
-      fileid: '1iSsqopd2QLhlQDx0gVX9rYoUp-akX1tdZMF6910BhaU',
+      fileid: '1dr6uoe82Agwebh26kbQO8d47qnp2c-RHM9F7qr0sy3o',
       name: 'story_three'
     }
   ],

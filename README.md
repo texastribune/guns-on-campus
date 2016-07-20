@@ -1,26 +1,20 @@
-# The News Apps App Kit — Price of Admission Template
+# Guns on Campus
 
-This package helps jump start special Tribune features and series that are built outside the regular CMS. It's Tribune-centric, but easy to update and transform to fit your needs. If you're working on a single-page graphic and plan to embed it with an iframe, use the [News Apps Graphic Kit](https://github.com/texastribune/newsapps-graphic-kit).
+This project was built using the News Apps Kit Price of Admission template, a package that helps jump start special Tribune features and series that are built outside the regular CMS. It's Tribune-centric, but easy to update and transform to fit your needs. If you're working on a single-page graphic and plan to embed it with an iframe, use the [News Apps Graphic Kit](https://github.com/texastribune/newsapps-graphic-kit).
 
 ## Quickstart
 
-Run this command in your project's folder:
-
-```sh
-curl -fsSL https://github.com/texastribune/newsapps-app-kit/archive/price-of-admission-template.tar.gz | tar -xz --strip-components=1
-```
-
-Next, `npm install`.
+Clone this repo and run `npm install`.
 
 If this is your first time to ever use the kit, you need to follow the steps in your terminal for Google authorization, i.e. go to the given link and paste the token into the terminal.
 
 ## Creating Templates with Google Docs & Spreadsheets
 
-This kit allows you to pull in content from Google Docs and Spreadsheets. To use the story.html template file, you'll need to set up a Google doc using our [basic template](https://docs.google.com/document/d/1iSsqopd2QLhlQDx0gVX9rYoUp-akX1tdZMF6910BhaU) and follow these steps.
+This kit pulls in content from Google Docs and Spreadsheets. Here is a Google doc using our [basic template](https://docs.google.com/document/d/1iSsqopd2QLhlQDx0gVX9rYoUp-akX1tdZMF6910BhaU).
 
 #### Set up `config.js`
 
-Update the `config.js`, and add the unique Google Tokens for your  document(s) and spreadsheet(s). For spreadsheets, you'll need to designate how to process the data, as either a `keyvalue` or `objectlist`. You'll also need to assign a "name" in the `config.js` for each doc/sheet, which will become the name of a json file in your `/data` folder with the data pulled in from that document. You'll then be able to refer to that name throughout your project to pull data from that file.
+The `config.js` contains the unique Google Tokens for the documents loading content into this project. The assigned "name" in the `config.js` for each doc/sheet becomes the name of a json file in your `/data` folder with the data pulled in from that document. That way, you can refer to the data by name throughout the project to pull data from that file.
 
 #### Update project data with `npm run data/fetch`
 
@@ -28,7 +22,7 @@ To pull or update the data from your docs/sheets in your project, run the comman
 
 #### Create index.html / additional story pages
 
-All of the hard work to build your story page occurs in `/templates/layouts/story.html`. To create a new page, add an HTMl file inside `/app`, starting with `index.html` and insert the following code:
+Building a story page occurs in `/templates/layouts/story.html`. To create a new page, add an HTMl file inside `/app`, starting with `index.html` and insert the following code:
 
 ```
 {% extends 'layouts/story.html' %}
