@@ -1,0 +1,171 @@
+.prose {
+  @include clearfix;
+  @include font-size($base);
+  color: $color-dk-gray;
+  font-family: $serif;
+  line-height: 1.5;
+  margin: 1rem 0 0;
+
+  > p {
+    @extend %left-padding;
+    color: $color-dk-gray;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    max-width: $prose-width;
+
+    @include susy-media($prose-width) {
+      padding: 0 1rem 0 3rem;
+    }
+
+    a {
+      @extend %link;
+    }
+  }
+
+  //<h2>
+  &__subhead {
+    @extend %subhead;
+    padding: 0 1rem;
+
+    @include susy-media($prose-width) {
+      padding: 0 1rem 0 3rem;
+    }
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+  }
+
+  &__blockquote {
+    @include susy-media($page-width) {
+      padding: 0 0 0 1em;
+    }
+
+    &--quotemark {
+      @include font-size(66, .8);
+      color: $color-primary;
+      float: left;
+      font-family: $serif;
+      line-height: 1;
+      margin: 0;
+    }
+
+    &--quote {
+      @include font-size($l);
+      color: $color-dk-gray;
+      font-family: $serif;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 .25rem 1.5em;
+    }
+
+    &--caption {
+      @include font-size($m);
+      color: $color-gray;
+      font-family: $sans-serif;
+      margin: 0 0 0 1.75em;
+    }
+  }
+
+  // <ul>
+  &__list {}
+
+  // <li>
+  &__list-item {}
+
+  &__disclosure {
+    font-style: italic;
+  }
+
+  &__republish {
+    @include font-size($base);
+    font-family: $sans-serif;
+
+    &--body {
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      max-width: $prose-width;
+
+      @include susy-media($prose-width) {
+        padding: 0 1rem 0 3rem;
+      }
+
+      p { margin-bottom: 1em;}
+    }
+
+    &--buttons {
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      max-width: $prose-width;
+
+      @include susy-media($prose-width) {
+        padding: 0 1rem 0 3rem;
+      }
+    }
+  }
+
+  &__shares {
+    @include font-size($s);
+    float: none;
+    padding: 0 1rem;
+    margin: 0 0 .5rem;
+
+    @include susy-media($prose-width) {
+      padding: 0 1rem 0 3rem;
+    }
+
+    @include susy-media($page-width) {
+      padding: 0 1rem;
+      float: right;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 1rem 0 0;
+    }
+
+    a {
+      color: $white;
+
+      .fa-circle {
+        color: $color-secondary;
+      }
+
+      &:active,
+      &:hover {
+        .fa-circle {
+          color: $color-primary;
+        }
+      }
+    }
+
+
+  }
+
+  .ad-slot {
+    margin-bottom: 1rem;
+    max-width: $prose-width;
+    text-align: center;
+
+    &--right-lock {
+      margin-bottom: 2rem;
+      margin-right: 1rem;
+      width: 100%;
+
+      @include susy-media($prose-premobile-bp) {
+        float: right;
+        margin-left: 1rem;
+        width: 40%;
+      }
+    }
+  }
+
+  &--left-lock {
+    @extend %left-lock;
+  }
+
+  &--right-lock {
+    @extend %right-lock;
+  }
+
+}
