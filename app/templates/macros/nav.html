@@ -17,46 +17,39 @@
 {% set 'story3_headline' = 'Donec orci lectus aliquam ut' %}
 {% set 'story3_slug' = 'story-3' %}
 
-{% set 'extra_headline' = 'Interactive' %}
+{% set 'extra_headline' = 'Video' %}
 {% set 'extra_copy' = 'Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.' %}
 {% set 'extra_slug' = 'interactive' %}
 
-{% macro navaside() %}
+{% macro navaside(one, two, three, video) %}
 <aside class="nav__aside">
   <header>
-    <!-- Series Logo -->
-    <figure class="nav__aside--logo">
-      <img class="" src="{{ PATH_PREFIX }}assets/images/demo/fake-logo.png">
-    </figure>
-    <p class="nav__aside--subtitle">See all the stories in this series.</p>
+    <p class="nav__aside--subtitle">Related Content</p>
   </header>
 
   <ul>
     <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
         <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-i"></div>
-        <p class="nav__aside--story_part">Part I</p>
-        <h4 class="nav__aside--story_headline">{{ story1_headline }}</h4>
-      </div>    
+        <h4 class="nav__aside--story_headline">{{ one.headline }}</h4>
+      </div>
     </li></a>
     <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ story2_slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
         <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-ii"></div>
-        <p class="nav__aside--story_part">Part II</p>
-        <h4 class="nav__aside--story_headline">{{ story2_headline }}</h4>
-      </div>       
+        <h4 class="nav__aside--story_headline">{{ two.headline }}</h4>
+      </div>
     </li></a>
     <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ story3_slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
         <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-iii"></div>
-        <p class="nav__aside--story_part">Part III</p>
-        <h4 class="nav__aside--story_headline">{{ story3_headline }}</h4>
+        <h4 class="nav__aside--story_headline">{{ three.headline }}</h4>
       </div>
     </li></a>
-    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}interactive"><li class="nav__aside--story_extra-wrapper">
+    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ extra_slug }}"><li class="nav__aside--story_extra-wrapper">
       <div class="nav__aside--story_part-wrapper">
-        <p class="nav__aside--story_subpart">{{ extra_headline }}</p>
-        <p class="nav__aside--story_subtitle story">{{ extra_copy }}</p>
+        <p class="nav__aside--story_subpart">{{ video.headline }}</p>
+        <p class="nav__aside--story_subtitle story">{{ video.summary }}</p>
       </div>
     </li></a>
   </ul>
@@ -70,22 +63,20 @@
       <a href="{{ PATH_PREFIX }}{{ story2_slug }}">
       <div class="nav__footer--lead-art storytop--lead-art_ii"></div>
       <header class="nav__footer--box">
-        <div class="nav__footer--part">Part II</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline">{{ story2_headline }}</h1>
-        </div>     
+        </div>
       </header>
       </a>
       {% else %}
       <a href="{{ PATH_PREFIX }}">
       <div class="nav__footer--lead-art storytop--lead-art_i"></div>
       <header class="nav__footer--box">
-        <div class="nav__footer--part">Part I</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline">{{ story1_headline }}</h1>
-        </div>     
+        </div>
       </header>
-      </a>      
+      </a>
       {% endif %}
     </div>
     <div class="nav__footer--wrapper">
@@ -93,22 +84,20 @@
       <a href="{{ PATH_PREFIX }}{{ story3_slug }}">
       <div class="nav__footer--lead-art storytop--lead-art_iii"></div>
       <header class="nav__footer--box">
-        <div class="nav__footer--part">Part III</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline">{{ story3_headline }}</h1>
-        </div>     
+        </div>
       </header>
-      </a> 
+      </a>
       {% else %}
       <a href="{{ PATH_PREFIX }}{{ story2_slug }}">
       <div class="nav__footer--lead-art storytop--lead-art_ii"></div>
       <header class="nav__footer--box">
-        <div class="nav__footer--part">Part II</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline">{{ story2_headline }}</h1>
-        </div>     
+        </div>
       </header>
-      </a>     
+      </a>
       {% endif %}
     </div>
 
@@ -119,10 +108,9 @@
       <a href="{{ PATH_PREFIX }}{{ story3_slug }}">
       <div class="nav__footer--lead-art storytop--lead-art_iii"></div>
       <header class="nav__footer--box">
-        <div class="nav__footer--part">Part III</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline">{{ story3_headline }}</h1>
-        </div>     
+        </div>
       </header>
       </a>
       {% else %}
@@ -132,9 +120,9 @@
         <div class="nav__footer--part">{{ extra_headline }}</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline_sub">{{ extra_copy }}</h1>
-        </div>     
+        </div>
       </header>
-      </a>     
+      </a>
       {% endif %}
     </div>
     <div class="nav__footer--wrapper">
@@ -145,9 +133,9 @@
         <div class="nav__footer--part">{{ extra_headline }}</div>
         <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline_sub">{{ extra_copy }}</h1>
-        </div>     
+        </div>
       </header>
-      </a> 
+      </a>
       {% else %}
 <!--       <a href="{{ PATH_PREFIX }}podcast"> -->
       <div class="nav__footer--lead-art storytop--lead-art_podcast"></div>
@@ -155,9 +143,9 @@
         <div class="nav__footer--part">Coming soon: Podcast</div>
 <!--    <div class="nav__footer--headline-box">
           <h1 class="nav__footer--headline_sub">Test Short Head</h1>
-        </div>  -->    
+        </div>  -->
       </header>
-<!--       </a>   -->      
+<!--       </a>   -->
     {% endif %}
     </div>
   </nav>

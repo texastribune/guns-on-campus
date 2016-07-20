@@ -285,7 +285,7 @@ $sans-serif: open-sans, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-s
 
   &--headline-box {
     background-color: #fff;
-    padding: 2.5rem 1rem 0;
+    padding: 1rem 1rem 0;
     width: 100%;
 
     @include susy-media($prose-width) {

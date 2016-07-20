@@ -25,6 +25,10 @@ config.data = {
     {
       fileid: '1dr6uoe82Agwebh26kbQO8d47qnp2c-RHM9F7qr0sy3o',
       name: 'story_three'
+    },
+    {
+      fileid: '1ukVxP4UOXevDY2KENwfbaaFvj5Li36NKMr1NmEUGb44',
+      name: 'video'
     }
   ],
   sheets: [

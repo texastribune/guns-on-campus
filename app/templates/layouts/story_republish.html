@@ -33,18 +33,15 @@
       <p>{{ context.lead_art.caption }} | {{ context.lead_art.credit }}</p>
     </div>
     <header class="storytop">
-      <!-- Part # -->
-      <div class="storytop--part">{% if (context.id == 'i' or context.id == 'ii' or context.id == 'iii') %}Part {% endif %}{{ context.id }}</div>
-
       <div class="storytop--headline-box">
         <!-- Headline -->
         <h1 class="storytop--headline">{{ context.headline }}</h1>
         <!-- Byline, Pub Date -->
         <p class="storytop--byline">by {{ authors(context.authors) }} | {{ context.pub_date }}</p>
-      </div>     
+      </div>
     </header>
   </div>
-  
+
   <article class="prose prose__republish">
     <p>You’re welcome to republish our articles and graphics for free using the following ground rules. (Please let us know if you republish our stories; it makes us happy!)</p>
     <p>See a full list of multimedia republishing terms <a href="http://www.texastribune.org/republishing-guidelines/">here</a>. For questions please contact Natalie Choate, director of media relations and partnerships, at <a href="mailto:nchoate@texastribune.org">nchoate@texastribune.org</a>.</p>
@@ -52,11 +49,11 @@
     <div class="prose__republish--buttons">
        <button id="text-btn" data-clipboard-target="#copytext" class="ghost-button active">View as Text</button>
        <button id="html-btn" data-clipboard-target="#copytext-html" class="ghost-button">View as HTML</button>
-       <button id="copy" data-clipboard-target="#copytext" class="ghost-button">Copy</button>     
+       <button id="copy" data-clipboard-target="#copytext" class="ghost-button">Copy</button>
     </div>
 
   </article>
-  
+
   <article id="copytext" class="prose prose__republish--body">
     <div id="text">
     {% for item in context.prose %}
