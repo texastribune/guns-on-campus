@@ -60,19 +60,23 @@
   <article class="prose">
     <!-- Share buttons -->
     <ul class="prose__shares">
-      <!-- Twitter -->
-      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text, 'highered') }}">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x"></i>
-        </span>
-      </a></li>
       <!-- Facebook -->
       <li><a href="{{ share.facebook(data.PATH_FULL, context.slug) }}"  target="_blank">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-facebook fa-stack-1x"></i>
-        </span>
+        <button class="prose__shares--btn fb">
+          <i class="fa fa-facebook"></i>
+        </button>
+      </a></li>
+      <!-- Twitter -->
+      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text, 'highered') }}">
+        <button class="prose__shares--btn tw">
+          <i class="fa fa-twitter"></i>
+        </button>
+      </a></li>
+      <li><a href="#civil-comments">
+        <button class="prose__shares--btn cc">
+          <i class="fa fa-comments"></i>
+          <span class='civil-comment-count' data-site-id='tt' data-id="test-new-comments" data-language='en'></span>
+        </button>
       </a></li>
     </ul>
 
@@ -80,7 +84,7 @@
        and builds components from macros in prose.html -->
   {% for item in context.prose %}
     {% if item.type == 'nav_aside' %}
-      {{ navaside(data.story_one, data.story_two, data.story_three, data.video) }}
+      <!-- {{ navaside(data.story_one, data.story_two, data.story_three, data.video) }} -->
     {% else %}
     {{ prose[item.type](item.value, data) }}
     {% endif %}
@@ -91,12 +95,19 @@
   {% elif context.republish %}
   {{ prose.republish(context.slug) }}
   {% endif %}
+
+
+  <!-- <div class="commentjump">
+    <a href="#civil-comments"><button class="prose__shares--btn cc">
+      <span class="commentjump">Join the Discussion</span>
+      <i class="fa fa-comments"></i>
+      <span class='civil-comment-count' data-site-id='tt' data-id="test-new-comments" data-language='en'></span>
+    </button>
+    </a>
+  </div>
+-->
   </article>
 
-  <!-- Footer - Bottom Story Nav / Contributors ) -->
-  <span class='civil-comment-count' data-site-id='tt' data-id="test-new-comments" data-language='en'></span>
-
-  {{ navfooter(context.id, context.headline) }}
   <div id="civil-comments" data-id="test-new-comments">
   </div>
 </main>

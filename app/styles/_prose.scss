@@ -107,16 +107,18 @@
   &__shares {
     @include font-size($s);
     float: none;
-    padding: 0 1rem;
-    margin: 0 0 .5rem;
+    padding: 0;
+    margin: 0 0 .5em 1em;
 
     @include susy-media($prose-width) {
       padding: 0 1rem 0 3rem;
+      margin: 0;
     }
 
     @include susy-media($page-width) {
-      padding: 0 1rem;
       float: right;
+      margin: 0;
+      padding: 0 1rem;
     }
 
     li {
@@ -139,6 +141,19 @@
       }
     }
 
+    &--btn {
+      @include btn($color-secondary, ghost);
+      @include font-size($s);
+      min-width: 3em;
+    }
+
+    .fb {
+      @include btn(#2d60c4, ghost);
+    }
+
+    .tw {
+      @include btn(#55acee, ghost);
+    }
 
   }
 

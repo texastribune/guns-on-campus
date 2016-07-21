@@ -102,9 +102,22 @@
 
       p {
         line-height: 1.3;
-        margin: .5em 0;
+        margin: 1.35em 0 0;
       }
     }
+  }
+}
+
+.commentjump {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+
+  @include susy-media($prose-width) {
+    padding: 0 1rem 0 3rem;
+  }
+
+  &__prompt {
+    margin: 0 1em 0 0;
   }
 }
 
