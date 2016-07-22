@@ -42,12 +42,10 @@
 
   <!-- Story Top: Lead Art / Headline / Byline -->
   <div class="storytop--wrapper">
-    <!-- Lead Art - Set as a background image on a specific class for each story. -->
-    <div class="storytop--lead-art storytop--lead-art_{{ context.id }}"></div>
-    <div class="storytop--caption">
-      <p>{{ context.lead_art.caption }} | {{ context.lead_art.credit }}</p>
+    <div>
+      <iframe src="https://www.youtube.com/embed/{{ context.video_id }}" frameborder="0" allowfullscreen></iframe>
     </div>
-    <header class="storytop">
+    <header class="storytop storytop--video">
       <div class="storytop--headline-box">
         <!-- Headline -->
         <h1 class="storytop--headline">{{ context.headline }}</h1>

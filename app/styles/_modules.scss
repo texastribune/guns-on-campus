@@ -45,6 +45,22 @@
     position: absolute;
   }
 
+  &--video {
+    @include susy-media($prose-desktop-bp) {
+      bottom: 0;
+      margin: 0;
+      position: relative;
+    }
+
+    .storytop--headline-box {
+      @include susy-media($prose-width) {
+        padding: 0 1rem 0 3rem;
+        max-width: $prose-width;
+        margin: 1rem 0 0;
+      }
+    }
+  }
+
   &--wrapper {
     color: $color-dk-gray;
     height: $height;
@@ -118,6 +134,25 @@
 
   &__prompt {
     margin: 0 1em 0 0;
+  }
+}
+
+.comment__policy {
+  &--link {
+    @extend %link;
+    border: 0;
+    background: white;
+    padding: 0;
+    margin: 0;
+    color: $color-secondary;
+    text-decoration: underline;
+  }
+
+  &--box {
+    background-color: transparentize($tribune-yellow, .85);
+    display: none;
+    padding: 1em 0;
+    margin: 0 0 1em;
   }
 }
 
