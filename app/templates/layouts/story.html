@@ -118,7 +118,7 @@
 
   </article>
 
-  <div id="civil-comments" data-id="{{ context.civil }}">
+  <div id="civil-comments" data-id="{{ context.slug }}">
   </div>
 </main>
 
@@ -149,6 +149,6 @@
 <script src="{{ data.PATH_PREFIX }}scripts/{{ context.script }}.js"></script>
 <script>
   (function(c, o, m, e, n, t, s){c[n] = c[n] || function() {var args = [].slice.call(arguments);(c[n].q = c[n].q || []).push(args);t = o.createElement(m);s = o.getElementsByTagName(m)[0];t.async = 1;t.src = [e].concat(args.map(encodeURIComponent)).join("/");s.parentNode.insertBefore(t, s);};c["CivilCommentsObject"] = c[n];})(window, document, "script", "https://ssr.civilcomments.com/v1", "Civil");
-  Civil("{{ context.civil }}","tt","en");
+  Civil("{{ context.slug }}","tt","en");
 </script>
 {% endblock %}
