@@ -1,9 +1,4 @@
-{% extends 'layouts/story.html' %}
-
-{% set context = data.story_one %}
-{% set related_one = data.story_two %}
-{% set related_two = data.story_three %}
-{% set related_three = data.video %}
+{% extends 'layouts/base.html' %}
 
 {% block styles %}
 {{ super() }}
@@ -11,4 +6,12 @@
 
 {% block script %}
 {{ super()}}
+
+<script>
+// similar behavior as an HTTP redirect
+window.location.replace("https://apps.texastribune.org/guns-on-campus/allen-crum-helped-stop-ut-tower-shooter-charles-whitman");
+
+window.location.href = "https://apps.texastribune.org/guns-on-campus/allen-crum-helped-stop-ut-tower-shooter-charles-whitman";
+
+</script>
 {% endblock %}
