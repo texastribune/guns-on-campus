@@ -83,9 +83,9 @@
   <!-- Loops through your prose data
        and builds components from macros in prose.html -->
   {% for item in context.prose %}
-    {% if item.type == 'nav_aside' %}
-      <!-- {{ navaside(data.story_one, data.story_two, data.story_three, data.video) }} -->
-    {% else %}
+    <!-- {% if item.type == 'nav_aside' %}
+      {{ navaside(related_one, related_two, related_three) }}
+    {% else %} -->
     {{ prose[item.type](item.value, data) }}
     {% endif %}
   {% endfor %}
@@ -118,7 +118,7 @@
 
   </article>
 
-  <div id="civil-comments" data-id="test-new-comments">
+  <div id="civil-comments" data-id="{{ context.civil }}">
   </div>
 </main>
 
@@ -148,11 +148,7 @@
 {{ super() }}
 <script src="{{ data.PATH_PREFIX }}scripts/{{ context.script }}.js"></script>
 <script>
-  (function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};
-     a.CivilCommentsObject=a[b];c=e.createElement(f);d=e.getElementsByTagName(f)[0];
-     c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script",
-  "https://assets.civilcomments.com/v1/index.js","Civil");
-  Civil("test-new-comments","tt","en");
+  (function(c, o, m, e, n, t, s){c[n] = c[n] || function() {var args = [].slice.call(arguments);(c[n].q = c[n].q || []).push(args);t = o.createElement(m);s = o.getElementsByTagName(m)[0];t.async = 1;t.src = [e].concat(args.map(encodeURIComponent)).join("/");s.parentNode.insertBefore(t, s);};c["CivilCommentsObject"] = c[n];})(window, document, "script", "https://ssr.civilcomments.com/v1", "Civil");
+  Civil("{{ context.civil }}","tt","en");
 </script>
-<script src='https://js.civilcomments.com/v1/embed.js' async></script>
 {% endblock %}

@@ -41,29 +41,53 @@
       padding: 0 0 0 1em;
     }
 
-    &--quotemark {
-      @include font-size(66, .8);
-      color: $color-primary;
-      float: left;
-      font-family: $serif;
-      line-height: 1;
-      margin: 0;
-    }
-
     &--quote {
       @include font-size($l);
       color: $color-dk-gray;
       font-family: $serif;
       font-weight: 600;
       line-height: 1.3;
-      margin: 0 0 .25rem 1.5em;
+      margin: 0 0 .25rem 1em;
+      vertical-align: top;
+
+      @include susy-media($prose-width) {
+        margin: 0 0 .25rem 2em;
+      }
     }
 
     &--caption {
       @include font-size($m);
       color: $color-gray;
       font-family: $sans-serif;
-      margin: 0 0 0 1.75em;
+      margin: 0 0 0 1.5em;
+
+      @include susy-media($prose-width) {
+        margin: 0 0 0 2.5em;
+      }
+    }
+  }
+
+  &__quotemark {
+    @include font-size(66, .8);
+    @include clearfix;
+    color: $color-primary;
+    font-family: $serif;
+    margin: 0;
+
+    &--right {
+      line-height: 1;
+      margin: 0 .25em 0 0;
+      text-align: right;
+
+      @include susy-media($prose-width) {
+        line-height: .5;
+        margin: 0;
+      }
+    }
+
+    &--left {
+      line-height: .5;
+      margin: .15em 0 0 .25em;
     }
   }
 

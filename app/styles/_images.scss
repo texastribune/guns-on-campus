@@ -33,7 +33,7 @@
     width: 48%;
 
     @include susy-media($prose-desktop-bp) {
-      margin-right: -10rem;      
+      margin-right: -10rem;
     }
   }
 
@@ -46,7 +46,7 @@
     @include susy-media($prose-desktop-bp) {
       float: right;
       margin-left: 1rem;
-      width: 40%;      
+      width: 40%;
     }
   }
 

@@ -12,18 +12,6 @@
 
 {% block content %}
 <main class="main-body">
-  <!-- Series Logo -->
-  <figure class="series--logo">
-    <!-- Mobile Series Logo -->
-    <img class="series--logo__mobile" src="{{ data.PATH_PREFIX }}assets/images/demo/fake-logo.png">
-    <!-- Desktop Series Logo -->
-    <img class="series--logo__desktop" src="{{ data.PATH_PREFIX }}assets/images/demo/fake-logo.png">
-  </figure>
-
-  <!-- Series Tagline -->
-  <header>
-    <h1 class="series--logo__tagline">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla neque dolor, sagittis eget.</h1>
-  </header>
 
   <!-- Story Top: Lead Art / Headline / Byline -->
   <div class="storytop--wrapper">
@@ -61,7 +49,6 @@
         {{ prose[item.type](item.value, data) }}
       {% endif %}
     {% endfor %}
-    <p>This story is part of The Texas Tribune's <a href="http://apps.texastribune.org/price-of-admission">Price of Admission</a> series.</p>
     <p><a href="http://www.texastribune.org/">The Texas Tribune</a> is a nonpartisan, nonprofit media organization that informs Texans — and engages with them – about public policy, politics, government and statewide issues. Learn more at <a href="http://www.texastribune.org/">texastribune.org.</a></p>
     </div>
     <div id="html">
@@ -72,13 +59,11 @@
             {{ prose['html_text'](item.value, data) }}
           {% endif %}
         {% endfor %}
-        &lt;p>This story is part of The Texas Tribune's &lt;a href="http://apps.texastribune.org/price-of-admission">Price of Admission&lt;/a> series.&lt;/p>
         &lt;p>&lt;a href="http://www.texastribune.org/">The Texas Tribune&lt;/a> is a nonpartisan, nonprofit media organization that informs Texans — and engages with them – about public policy, politics, government and statewide issues. Learn more at a href="http://www.texastribune.org/">texastribune.org&lt;/a>.&lt;/p>
 <!--         </code>
       </pre>  -->
     </div>
   </article>
-  {{ navfooter(context.id, context.headline) }}
 </main>
 <footer class="footer">
   <div class="footer-container">

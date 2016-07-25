@@ -8,19 +8,6 @@
   </nav>
 {% endmacro %}
 
-<!-- Set Parameters for Nav Aside & Footer -->
-{% set 'story1_headline' = 'Donec orci lectus aliquam ut' %}
-
-{% set 'story2_headline' = 'Donec orci lectus aliquam ut' %}
-{% set 'story2_slug' = 'story-2' %}
-
-{% set 'story3_headline' = 'Donec orci lectus aliquam ut' %}
-{% set 'story3_slug' = 'story-3' %}
-
-{% set 'extra_headline' = 'Video' %}
-{% set 'extra_copy' = 'Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.' %}
-{% set 'extra_slug' = 'interactive' %}
-
 {% macro navaside(one, two, three, video) %}
 <aside class="nav__aside">
   <header>
@@ -28,30 +15,30 @@
   </header>
 
   <ul>
-    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}"><li class="nav__aside--story_wrapper">
+    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ one.slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
-        <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-i"></div>
+        <div class="nav__aside--story_thumbnail">
+          <img src="{{ data.PATH_PREFIX }}assets/images/{{ one.thumbnail_url }}" alt="">
+        </div>
         <h4 class="nav__aside--story_headline">{{ one.headline }}</h4>
       </div>
     </li></a>
-    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ story2_slug }}"><li class="nav__aside--story_wrapper">
+    <!-- <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ two.slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
-        <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-ii"></div>
+        <div class="nav__aside--story_thumbnail">
+          <img src="{{ data.PATH_PREFIX }}assets/images/{{ two.thumbnail_url }}" alt="">
+        </div>
         <h4 class="nav__aside--story_headline">{{ two.headline }}</h4>
       </div>
     </li></a>
-    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ story3_slug }}"><li class="nav__aside--story_wrapper">
+    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ three.slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
-        <div class="nav__aside--story_thumbnail nav__aside--story_thumbnail-iii"></div>
+        <div class="nav__aside--story_thumbnail">
+          <img src="{{ data.PATH_PREFIX }}assets/images/{{ three.thumbnail_url }}" alt="">
+        </div>
         <h4 class="nav__aside--story_headline">{{ three.headline }}</h4>
       </div>
-    </li></a>
-    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ extra_slug }}"><li class="nav__aside--story_extra-wrapper">
-      <div class="nav__aside--story_part-wrapper">
-        <p class="nav__aside--story_subpart">{{ video.headline }}</p>
-        <p class="nav__aside--story_subtitle story">{{ video.summary }}</p>
-      </div>
-    </li></a>
+    </li></a> -->
   </ul>
 </aside>
 {% endmacro %}
