@@ -6,12 +6,12 @@ $tribune-black: #000;
 $white: rgb(255, 255, 255);
 
 // Series Colors
-$color-primary: rgb(163, 31, 58); // #a31f3a; dark red/burgundy
-$color-secondary: rgb(53, 109, 151); // #356D97 steel blue
-$color-tertiary: rgb(153, 204, 51); // #99cc33 lime
-$color-lt-gray: rgb(225,225,225); //#e1e1e1
-$color-gray: rgb(137, 136, 149);// #898895
-$color-dk-gray: rgb(58, 58, 79); // #3a3a4f
+$color-primary: #ffb900; // #a31f3a; dark red/burgundy
+$color-secondary: #539bae; // #356D97 steel blue
+$color-tertiary: #a1d2df; // #99cc33 lime
+$color-lt-gray: #D0D0D0; //#e1e1e1
+$color-gray: #797979;// #898895
+$color-dk-gray: #222222; //
 
 // Sample Breakpoints
 $small: new-breakpoint(min-width 460px max-width 810px);
@@ -51,11 +51,14 @@ $xxs: 10;
 
 // Font Stuff
 // Trib Base Fonts
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Text:400,400i|Open+Sans:400,600');
+
 $font-georgia: Georgia, Times, 'Times New Roman', serif;
 $font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // Series Specific
-$serif: "utopia-std", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-$sans-serif: open-sans, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$serif: 'PT Serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
 
 // Font Sizing
 @mixin font-size($f, $pct:1, $bp:480px) {
