@@ -169,6 +169,10 @@ $sans-serif: open-sans, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-s
   @include btn($color-primary);
 }
 
+.ghost-button{
+  @include btn($color-primary, ghost);
+}
+
 // Story Subheader
 %subhead {
   @include font-size($m);
@@ -252,24 +256,16 @@ $sans-serif: open-sans, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-s
 
   // Lead Art Background Images
   &--lead-art_i {
-    background-image: url(../assets/images/demo/test.jpg);
-    background-position: 0% 0%;
+    background-image: url(../assets/images/www/GOC-Crumb-001.jpg);
+    background-position: 15% 0%;
   }
 
   &--lead-art_ii {
-    background-image: url(../assets/images/demo/test2.jpg);
+    background-image: url(../assets/images/www/GOC-Anniversary-001.jpg);
   }
 
   &--lead-art_iii {
     background-image: url(../assets/images/demo/test3.jpg);
-  }
-
-  &--lead-art_interactive {
-    background-image: url(../assets/images/demo/test4.jpg);
-  }
-
-  &--lead-art_podcast {
-    background-image: url(../assets/images/demo/test.jpg);
   }
 
   &--part {

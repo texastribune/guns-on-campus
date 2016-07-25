@@ -24,9 +24,10 @@
 {% macro blockquote(value) %}
 <aside{% if value.alignment %} class="prose--{{ value.alignment }}{% endif %}">
   <blockquote class="prose__blockquote">
-    <div class="prose__blockquote--quotemark">&ldquo;</div>
+    <div class="prose__quotemark prose__quotemark--left">&ldquo;</div>
     <p class="prose__blockquote--quote{% if value.quote_class %} blockquote__quote--{{ value.quote_class }}{% endif %}">{{ value.quote }}</p>
     {% if value.caption %}<p class="prose__blockquote--caption">&mdash; {{ value.caption }}</p>{% endif %}
+    <div class="prose__quotemark prose__quotemark--right">&rdquo;</div>
   </blockquote>
 </aside>
 {% endmacro %}
@@ -64,7 +65,7 @@
 {% endmacro %}
 
 {% macro republish(value) %}
-<p class="prose__disclosure">To republish this story for free, click <a href="../{% if value.slug != '' %}{{ value.slug }}-{% endif %}republish">here</a> or email <a href="mailto:editors@texastribune.org">editors@texastribune.org</a>.</p>
+<p class="prose__disclosure">To republish this story for free, click <a href="{% if value.slug != 'index' %}../{{ value.slug }}-republish{% else %}/guns-on-campus/republish{% endif %}">here</a> or email <a href="mailto:editors@texastribune.org">editors@texastribune.org</a>.</p>
 {% endmacro %}
 
 {% macro image(value, data) %}
