@@ -9,9 +9,9 @@ $white: rgb(255, 255, 255);
 $color-primary: #ffb900; // #a31f3a; dark red/burgundy
 $color-secondary: #539bae; // #356D97 steel blue
 $color-tertiary: #a1d2df; // #99cc33 lime
-$color-lt-gray: #D0D0D0; //#e1e1e1
-$color-gray: #797979;// #898895
-$color-dk-gray: #222222; //
+$color-lt-gray: #D0D0D0;
+$color-gray: #797979;
+$color-dk-gray: #222222;
 
 // Sample Breakpoints
 $small: new-breakpoint(min-width 460px max-width 810px);

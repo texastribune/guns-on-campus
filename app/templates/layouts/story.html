@@ -5,6 +5,7 @@
 {% import 'macros/share.html' as share %}
 
 {% block social %}
+<title>{{ context.seo }}</title>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@texastribune">
 <meta name="twitter:creator" content="@texastribune">
@@ -67,7 +68,7 @@
         </button>
       </a></li>
       <!-- Twitter -->
-      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text, 'highered') }}">
+      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text) }}">
         <button class="prose__shares--btn tw">
           <i class="fa fa-twitter"></i>
         </button>
