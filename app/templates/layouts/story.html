@@ -25,7 +25,7 @@
     "@context": "http://schema.org",
     "@type": "NewsArticle",
     "headline": "{{ context.headline }}",
-    "url": "{{ data.PATH_FULL }}",
+    "url": "{{ data.PATH_FULL }}{{ context.slug }}",
     "thumbnailUrl": "{{ data.PATH_FULL }}assets/images/{{ context.fb_art }}",
     "dateCreated": "2016-07-26T06:00:00-06:00",
     "articleSection": "FRONT PAGE, HIGHER EDUCATION",
