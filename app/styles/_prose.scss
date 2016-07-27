@@ -207,4 +207,8 @@
     @extend %right-lock;
   }
 
+  .video {
+    margin: 0 0 2em 3em;
+    max-width: $prose-width;
+  }
 }

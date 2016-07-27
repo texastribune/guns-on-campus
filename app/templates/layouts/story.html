@@ -84,9 +84,9 @@
   <!-- Loops through your prose data
        and builds components from macros in prose.html -->
   {% for item in context.prose %}
-    <!-- {% if item.type == 'nav_aside' %}
+    {% if item.type == 'nav_aside' %}
       {{ navaside(related_one, related_two, related_three) }}
-    {% else %} -->
+    {% else %}
     {{ prose[item.type](item.value, data) }}
     {% endif %}
   {% endfor %}
