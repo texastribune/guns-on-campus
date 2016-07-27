@@ -26,10 +26,10 @@
     "@type": "NewsArticle",
     "headline": "{{ context.headline }}",
     "url": "{{ data.PATH_FULL }}",
-    "thumbnailUrl": "",
-    "dateCreated": "2016-02-09T06:00:00-06:00",
+    "thumbnailUrl": "{{ data.PATH_FULL }}assets/images/{{ context.fb_art }}",
+    "dateCreated": "2016-07-26T06:00:00-06:00",
     "articleSection": "FRONT PAGE, HIGHER EDUCATION",
-    "creator": ["Becca Aaronson, The Texas Tribune"]
+    "creator": ["Matthew Watkins, Becca Aaronson"]
   }
 </script>
 {% endblock %}
@@ -76,7 +76,7 @@
       <li><a href="#join-conversation">
         <button class="prose__shares--btn cc">
           <i class="fa fa-comments"></i>
-          <span class='civil-comment-count' data-site-id='tt' data-id="test-new-comments" data-language='en'></span>
+          <span class='civil-comment-count' data-site-id='tt' data-id="{{ context.slug }}" data-language='en'></span>
         </button>
       </a></li>
     </ul>
