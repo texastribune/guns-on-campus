@@ -4,8 +4,8 @@
 var config = {};
 
 config.deploy = {
-  bucket: 'apps.texastribune.org',
-  key: 'guns-on-campus',
+  bucket: 'moose.texastribune.org',
+  key: 'guns-on-campus-draft',
   profile: 'newsapps'
 };
 
