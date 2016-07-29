@@ -71,7 +71,7 @@
 {% macro image(value, data) %}
 <figure class="image{% if value.alignment %} prose--{{ value.alignment }}{% else %} image--full{% endif %}">
   <img class="image__img" src="{{ data.PATH_PREFIX }}assets/images/{{ value.photo_url }}">
-  <figcaption class="image__caption">{{ value.caption }}{% if value.credit %} | {{ value.credit }}{% endif %}</figcaption>
+  <figcaption class="image__caption">{% if value.caption %}{{ value.caption }}  | {% endif %}{% if value.credit %}{{ value.credit }}{% endif %}</figcaption>
 </figure>
 {% endmacro %}
 

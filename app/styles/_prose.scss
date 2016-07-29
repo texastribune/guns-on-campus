@@ -25,6 +25,7 @@
   //<h2>
   &__subhead {
     @extend %subhead;
+    max-width: 47em;
     padding: 0 1rem;
 
     @include susy-media($prose-width) {

@@ -31,14 +31,14 @@
         <h4 class="nav__aside--story_headline">{{ two.headline }}</h4>
       </div>
     </li></a>
-    <!-- <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ three.slug }}"><li class="nav__aside--story_wrapper">
+    <a class="nav__aside--story_link" href="{{ PATH_PREFIX }}{{ two.slug }}"><li class="nav__aside--story_wrapper">
       <div class="nav__aside--story">
         <div class="nav__aside--story_thumbnail">
-          <img src="{{ data.PATH_PREFIX }}assets/images/{{ three.thumbnail_url }}" alt="">
+          <img src="{{ PATH_PREFIX }}assets/images/{{ three.thumbnail_url }}" alt="">
         </div>
         <h4 class="nav__aside--story_headline">{{ three.headline }}</h4>
       </div>
-    </li></a> -->
+    </li></a>
   </ul>
 </aside>
 {% endmacro %}
