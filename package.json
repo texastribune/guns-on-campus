@@ -2,7 +2,7 @@
   "private": true,
   "config": {
     "s3_bucket": "moose.texastribune.org",
-    "slug": "guns-on-campus"
+    "slug": "guns-on-campus-draft"
   },
   "devDependencies": {
     "archieml": "^0.3.1",

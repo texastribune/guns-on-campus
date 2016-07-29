@@ -5,7 +5,7 @@ var config = {};
 
 config.deploy = {
   bucket: 'moose.texastribune.org',
-  key: 'guns-on-campus',
+  key: 'guns-on-campus-draft',
   profile: 'newsapps'
 };
 
@@ -29,6 +29,10 @@ config.data = {
     {
       fileid: '1ukVxP4UOXevDY2KENwfbaaFvj5Li36NKMr1NmEUGb44',
       name: 'video'
+    },
+    {
+      fileid: '1v8bt8zpQe75ifJ9Pew-P4lp931338APLzQobBar1a1g',
+      name: 'whitman_in_film'
     }
   ],
   sheets: [

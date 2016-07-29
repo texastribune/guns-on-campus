@@ -207,4 +207,17 @@
     @extend %right-lock;
   }
 
+  .video {
+    margin: 0 0 1em;
+
+    @include susy-media($page-width) {
+      margin: 0 0 2em 3em;
+    }
+
+    max-width: $prose-width;
+  }
+
+  .fluid-width-video-wrapper {
+    margin: 0 0 .5em;
+  }
 }

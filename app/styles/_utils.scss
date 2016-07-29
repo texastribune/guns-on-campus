@@ -9,9 +9,9 @@ $white: rgb(255, 255, 255);
 $color-primary: #ffb900; // #a31f3a; dark red/burgundy
 $color-secondary: #539bae; // #356D97 steel blue
 $color-tertiary: #a1d2df; // #99cc33 lime
-$color-lt-gray: #D0D0D0; //#e1e1e1
-$color-gray: #797979;// #898895
-$color-dk-gray: #222222; //
+$color-lt-gray: #D0D0D0;
+$color-gray: #797979;
+$color-dk-gray: #222222;
 
 // Sample Breakpoints
 $small: new-breakpoint(min-width 460px max-width 810px);
@@ -263,12 +263,18 @@ $sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans
     background-position: 15% 0%;
   }
 
-  &--lead-art_ii {
+  &--lead-art_films {
+    background-image: url(../assets/images/UTShooting-PopCulture.jpg);
+    background-position: 50% 0%;
+  }
+
+  &--lead-art_iv {
     background-image: url(../assets/images/www/GOC-Anniversary-001.jpg);
   }
 
   &--lead-art_iii {
-    background-image: url(../assets/images/demo/test3.jpg);
+    background-image: url(../assets/images/www/GOC-Anniversary-002.jpg);
+    background-position: 70% 0%;
   }
 
   &--part {

@@ -122,3 +122,12 @@
   </figure>
 </aside>
 {% endmacro %}
+
+{% macro video(value, caption) %}
+<figure class="video" itemprop="associatedMedia">
+  <iframe src="//www.youtube.com/embed/{{ value.id }}" frameborder="0" allowfullscreen></iframe>
+  {% if value.caption %}
+  <figcaption class="image__caption">{{ value.caption }}</figcaption>
+  {% endif %}
+</figure>
+{% endmacro %}

@@ -5,6 +5,7 @@
 {% import 'macros/share.html' as share %}
 
 {% block social %}
+<title>{{ context.seo }}</title>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@texastribune">
 <meta name="twitter:creator" content="@texastribune">
@@ -24,11 +25,11 @@
     "@context": "http://schema.org",
     "@type": "NewsArticle",
     "headline": "{{ context.headline }}",
-    "url": "{{ data.PATH_FULL }}",
-    "thumbnailUrl": "",
-    "dateCreated": "2016-02-09T06:00:00-06:00",
-    "articleSection": "FRONT PAGE, HIGHER EDUCATION",
-    "creator": ["Becca Aaronson, The Texas Tribune"]
+    "url": "{{ data.PATH_FULL }}{{ context.slug }}",
+    "thumbnailUrl": "{{ data.PATH_FULL }}assets/images/{{ context.fb_art }}",
+    "dateCreated": "{{ context.parsely.date }}T06:00:00-06:00",
+    "articleSection": "{{ context.parsely.articleSection }}",
+    "creator": ["{{ context.parsely.creator }}"]
   }
 </script>
 {% endblock %}
@@ -67,7 +68,7 @@
         </button>
       </a></li>
       <!-- Twitter -->
-      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text, 'highered') }}">
+      <li><a href="{{ share.twitter(data.PATH_FULL, context.slug, context.twitter_text) }}">
         <button class="prose__shares--btn tw">
           <i class="fa fa-twitter"></i>
         </button>
@@ -75,7 +76,7 @@
       <li><a href="#join-conversation">
         <button class="prose__shares--btn cc">
           <i class="fa fa-comments"></i>
-          <span class='civil-comment-count' data-site-id='tt' data-id="test-new-comments" data-language='en'></span>
+          <span class='civil-comment-count' data-site-id='tt' data-id="{{ context.slug }}" data-language='en'></span>
         </button>
       </a></li>
     </ul>
@@ -83,9 +84,9 @@
   <!-- Loops through your prose data
        and builds components from macros in prose.html -->
   {% for item in context.prose %}
-    <!-- {% if item.type == 'nav_aside' %}
+    {% if item.type == 'nav_aside' %}
       {{ navaside(related_one, related_two, related_three) }}
-    {% else %} -->
+    {% else %}
     {{ prose[item.type](item.value, data) }}
     {% endif %}
   {% endfor %}
