@@ -5,7 +5,7 @@
 {% import 'macros/share.html' as share %}
 
 {% block social %}
-<title>{{ context.seo }}</title>
+<title>{% if context.seo %}{{ context.seo }}{% else %}{{ context.headline }}{% endif %}</title>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@texastribune">
 <meta name="twitter:creator" content="@texastribune">
@@ -46,7 +46,7 @@
     <!-- Lead Art - Set as a background image on a specific class for each story. -->
     <div class="storytop--lead-art storytop--lead-art_{{ context.id }}"></div>
     <div class="storytop--caption">
-      <p>{{ context.lead_art.caption }} | {{ context.lead_art.credit }}</p>
+      <p>{% if context.lead_art.caption %}{{ context.lead_art.caption }} | {% endif %}{{ context.lead_art.credit }}</p>
     </div>
     <header class="storytop">
       <div class="storytop--headline-box">
