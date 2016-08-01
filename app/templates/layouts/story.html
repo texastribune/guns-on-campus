@@ -5,7 +5,7 @@
 {% import 'macros/share.html' as share %}
 
 {% block social %}
-<title>{{ context.seo }}</title>
+<title>{% if context.seo %}{{ context.seo }}{% else %}{{ context.headline }}{% endif %}</title>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@texastribune">
 <meta name="twitter:creator" content="@texastribune">
