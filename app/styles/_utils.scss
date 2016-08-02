@@ -268,13 +268,22 @@ $sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans
     background-position: 50% 0%;
   }
 
+  &--lead-art_iii {
+    background-image: url(../assets/images/www/GOC-Anniversary-002.jpg);
+    background-position: 70% 0%;
+  }
+
   &--lead-art_iv {
     background-image: url(../assets/images/www/GOC-CampusCarry-001.jpg);
   }
 
-  &--lead-art_iii {
-    background-image: url(../assets/images/www/GOC-Anniversary-002.jpg);
-    background-position: 70% 0%;
+  &--lead-art_v {
+    background-image: url(../assets/images/www/GOC-Memorial-Lead-003.jpg);
+  }
+
+  &--lead-art_vi {
+    background-image: url(../assets/images/www/TxTribMemorial11-Books-NotBullets-Lead.jpg);
+    background-position: 25% 50%;
   }
 
   &--part {
