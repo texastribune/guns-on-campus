@@ -1,0 +1,14 @@
+{% extends 'layouts/story.html' %}
+
+{% set context = data.story_guns %}
+{% set related_one = data.story_three %}
+{% set related_two = data.story_tower %}
+{% set related_three = data.story_one %}
+
+{% block styles %}
+{{ super() }}
+{% endblock %}
+
+{% block script %}
+{{ super()}}
+{% endblock %}

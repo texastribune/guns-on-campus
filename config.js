@@ -28,11 +28,15 @@ config.data = {
     },
     {
       fileid: '1ukVxP4UOXevDY2KENwfbaaFvj5Li36NKMr1NmEUGb44',
-      name: 'video'
+      name: 'story_guns'
     },
     {
       fileid: '1v8bt8zpQe75ifJ9Pew-P4lp931338APLzQobBar1a1g',
       name: 'whitman_in_film'
+    },
+    {
+      fileid: '12gzVnFcBQqeQQn9o0IJS5T9cC_bLmLEXogFfLb_HbuY',
+      name: 'story_tower'
     }
   ],
   sheets: [
