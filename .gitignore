@@ -36,8 +36,6 @@ node_modules
 # assets
 app/assets/fonts/*
 !app/assets/fonts/.gitkeep
-!app/assets/images/demo/*
-!app/assets/images/logos/*
 !app/assets/images/.gitkeep
 
 

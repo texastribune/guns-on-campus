@@ -6,7 +6,11 @@ This project was built using the News Apps Kit Price of Admission template, a pa
 
 Clone this repo and run `npm install`.
 
-If this is your first time to ever use the kit, you need to follow the steps in your terminal for Google authorization, i.e. go to the given link and paste the token into the terminal.
+If this is your first time to ever use the kit, you need to follow the steps in your terminal for Google authorization, i.e. go to the given link and paste the token into the terminal. You'll also need a `.tt_kit_google_client_secrets.json` file with a secret code in your root directory. Talk to a teammate to get this file. It will look something like this, but with your client_id and client_secret:
+
+```
+{"installed":{"auth_uri":"https://accounts.google.com/o/oauth2/auth","client_secret":"rAnDoML3tt#rs","token_uri":"https://accounts.google.com/o/oauth2/token","client_email":"","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","oob"],"client_x509_cert_url":"","client_id":"rAnDoML3tt#rs.apps.googleusercontent.com","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs"}}
+```
 
 ## Creating Templates with Google Docs & Spreadsheets
 
@@ -46,6 +50,7 @@ Additional HTML pages set up in your app will set the name of the file as the sl
 + *id* — This is the Part Number for the series. It's used to set up the story navigation in the `.nav__aside` and `.nav__footer` modules found in `/app/styles/_nav.scss`. It's also used to indicate which lead art class to use, which you define in `/app/styles/_utils/` > `@mixin story-header`.
 + *script* — Sets which script file to load in the `base.html`. You don't need to include the extension `.js`. Default: `main`
 + *headline* - Your story headline. Appears in the `.storytop`, `.nav__aside` and `.nav__footer`
++ *seo* - This will be fed to the Page Title tag. If not specified, the `<title>` will grab Headline.
 + *pub_date* - Publish date. Use AP style :)
 + *slug* - URL slug for your story. It must match the filename of the HTML file for that story.
 + *short_head* - Shorter headline, in case you need it.
@@ -69,6 +74,9 @@ Additional HTML pages set up in your app will set the name of the file as the sl
     + caption - Photo caption text
     + credit - Photo credit
     + alignment - Options: basic (full width), right-lock (float right on Desktop), left-lock(float left on Desktop)
+  - *{video}*
+    + id: youTubeID
+    + caption: Vestibulum ullamcorper mauris at ligula. Sed hendrerit.
   - *disclosure* - Italicizes text / adds `.disclosure` styles.
   - *republish* - Adds prompt/link to additional republish page. Requires you to separately set up an HTML page with the `story_republish.html` template.
 
